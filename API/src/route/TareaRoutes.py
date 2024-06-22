@@ -50,7 +50,7 @@ def editar_tarea(id):
 
     result = tarea_schema.dump(tarea)
     
-    return jsonify([{"msg":"Dato modificado exitosamente"},{result}])
+    return jsonify({"msg": "Dato modificado exitosamente", "tarea": result})
 
 #Ruta para eliminar un contacto por ID
 @main.route('/tareas/<id>', methods=['DELETE'])
